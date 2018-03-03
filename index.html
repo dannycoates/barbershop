@@ -6,59 +6,99 @@
     <title>Lehi Ole Town Barber Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    html { line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
-    body { margin: 0; }
-    header, section { display: block; }
-    h1 { font-size: 2em; margin: .67em 0; }
     html, body, div, section, header, a, h1, h2, p, ul, ol, li { box-sizing: border-box; }
-    .bg-white { background-color: #fff; }
-    .black-80 { color: rgba( 0, 0, 0, .8 ); }
-    .tc { text-align: center; }
-    .pv4 { padding-top: 2rem; padding-bottom: 2rem; }
-    .avenir { font-family: 'avenir next', avenir, sans-serif; }
-    .f4 { font-size: 1.25rem; }
-    .fw1 { font-weight: 100; }
-    .mt2 { margin-top: .5rem; }
-    .mb0 { margin-bottom: 0; }
-    .baskerville { font-family: baskerville, serif; }
-    .i { font-style: italic; }
-    .f1 { font-size: 3rem; }
-    .f6 { font-size: .875rem; }
-    .fw4 { font-weight: 400; }
-    .ttu { text-transform: uppercase; }
-    .tracked { letter-spacing: .1em; }
-    .center { margin-right: auto; margin-left: auto; }
-    .fl { float: left; _display: inline; }
-    .w-100 { width: 100%; }
-    .pa3 { padding: 1rem; }
-    .pb3 { padding-bottom: 1rem; }
-    .lh-copy { line-height: 1.5; }
-    .measure { max-width: 30em; }
+    html { line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      margin: 0 auto;
+    }
+    header {
+      color: rgba( 0, 0, 0, .8 );
+      text-align: center;
+      padding: 2rem 0;
+      font-family: 'avenir next', avenir, sans-serif;
+    }
+    h1 {
+      font-size: 2em;
+      margin: .67em 0;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 100;
+    }
+    .title {
+      margin-top: .5rem;
+      margin-bottom: 0;
+      font-weight: 100;
+      font-size: 3rem;
+      font-style: italic;
+      font-family: baskerville, serif;
+    }
+    .subtitle {
+      margin-top: .5rem;
+      margin-bottom: 0;
+      font-size: .875rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .main {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+    }
+    section {
+      padding: 1rem;
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'avenir next', avenir, sans-serif;
+    }
+    section h1 {
+      font-family: baskerville, serif;
+    }
+    section p {
+      margin: 0;
+      padding: 0 1em;
+      line-height: 1.5;
+      max-width: 28em;
+    }
+    .services ul {
+      padding: 0;
+    }
+    .appointments {
+      padding: 1rem;
+    }
+    .location {
+      padding: 1rem;
+    }
     .link { text-decoration: none; -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
     .link:link, .link:visited { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
     .link:hover { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
     .link:active { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
     .link:focus { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; outline: 1px dotted currentColor; }
-    @media screen and (min-width: 30em) {
-      .w-100-ns { width: 100%; }
-      .w5-ns { width: 16rem; }
-    }
-    @media screen and (min-width: 60em) {
-      .ph6-l { padding-left: 8rem; padding-right: 8rem; }
-      .w-third-l { width: calc( 100% / 3 ); }
+    @media screen and (max-width: 48em) {
+      .main {
+        flex-direction: column;
+      }
+      section {
+        width: 100%;
+      }
     }
     </style>
   </head>
   <body>
-    <header class="bg-white black-80 tc pv4 avenir">
-      <h2 class="f4 fw1">Pam Mayfield's</h2>
-      <h1 class="mt2 mb0 baskerville i fw1 f1">Lehi Ole Town<br> Barber Shop</h1>
-      <h2 class="mt2 mb0 f6 fw4 ttu tracked">est. 1980</h2>
+    <header>
+      <h2>Pam Mayfield's</h2>
+      <h1 class="title">Lehi Ole Town<br> Barber Shop</h1>
+      <h2 class="subtitle">est. 1980</h2>
     </header>
-    <div class="center ph6-l">
-    <section class="fl w-100 w-100-ns w-third-l pa3 avenir">
-      <h1 class="baskerville">Services</h1>
-      <p class="lh-copy measure">
+    <main class="main">
+    <section class="services">
+      <h1>Services</h1>
+      <p>
         Pam offers top customer service with a good ole fashion barber experience and 37 years experience.
         <ul>
           <li>Haircuts</li>
@@ -72,22 +112,22 @@
         </ul>
       </p>
     </section>
-    <section class="fl w-100 w5-ns w-third-l pa3 avenir">
-      <h1 class="baskerville">Appointments</h1>
-      <p class="lh-copy measure">
+    <section class="appointments">
+      <h1>Appointments</h1>
+      <p>
         Tuesday thru Saturday<br>
         <a class="link" href="tel:(801) 766-9890">(801) 766-9890</a>
       </p>
     </section>
-    <section class="fl w-100 w5-ns w-third-l pa3 avenir">
-      <h1 class="baskerville">Location</h1>
-      <address class="lh-copy measure pb3">
+    <section class="location">
+      <h1>Location</h1>
+      <address>
         <a class="link" href="http://maps.apple.com/?address=110+W+Main+St,Lehi,Utah">
           110 W. Main St.<br>
           Lehi, Utah 84043
         </a>
       </address>
     </section>
-  </div>
+  </main>
   </body>
 </html>
