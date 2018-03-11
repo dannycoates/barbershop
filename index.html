@@ -6,6 +6,15 @@
     <title>Lehi Ole Town Barber Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+    @font-face {
+      font-family: 'Storybook-Regular';
+      src:url('Storybook-Regular.ttf.woff') format('woff'),
+          url('Storybook-Regular.ttf.svg#Storybook-Regular') format('svg'),
+          url('Storybook-Regular.ttf.eot'),
+          url('Storybook-Regular.ttf.eot?#iefix') format('embedded-opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
     html, body, div, section, header, a, h1, h2, p, ul, ol, li { box-sizing: border-box; }
     html { line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
     body {
@@ -18,31 +27,29 @@
       color: rgba( 0, 0, 0, .8 );
       text-align: center;
       padding: 0;
-      padding-bottom: 1em;
       font-family: 'avenir next', avenir, sans-serif;
+    }
+    header p {
+      margin-top: 0.2rem;
     }
     h1 {
       font-size: 2em;
       margin: 0.2em 0;
     }
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 100;
+    .supertitle {
+      font-size: 2rem;
+      font-family: 'Storybook-Regular', baskerville, serif;
+      color: darkblue;
+      text-transform: uppercase;
+      margin: 0.5rem 0;
     }
     .title {
       margin-top: .5rem;
       margin-bottom: 0;
-      font-weight: 100;
-      font-size: 3rem;
-      font-style: italic;
-      font-family: baskerville, serif;
-    }
-    .subtitle {
-      margin-top: .5rem;
-      margin-bottom: 0;
-      font-size: .875rem;
+      font-size: 3.5rem;
+      font-family: 'Storybook-Regular', baskerville, serif;
       text-transform: uppercase;
-      letter-spacing: .1em;
+      color:firebrick;
     }
     .main {
       display: flex;
@@ -71,7 +78,7 @@
       padding: 0;
     }
     .appointment {
-      background-color: #0D5FD9;
+      background-color: darkblue;
       color: white;
       height: 50px;
       text-transform: uppercase;
@@ -103,23 +110,24 @@
   </head>
   <body>
     <header>
-      <h2>Pam Mayfield's</h2>
-      <h1 class="title">Lehi Ole Town<br> Barber Shop</h1>
-      <h2 class="subtitle">est. 1980</h2>
+      <h2 class="supertitle">Lehi Ole Town</h2>
+      <h1 class="title">Barber</h1>
+      <p>
+          Tuesday thru Saturday<br>
+          <a class="link" href="tel:(801) 766-9890">(801) 766-9890</a>
+        </p>
     </header>
     <main class="main">
     <section class="services">
       <h1>Services</h1>
       <p>
-        Pam offers top customer service with a good ole fashion barber experience and 37 years experience.
+        Pam &amp; Dustin offer top customer services with good ole fashion barber experience.
         <ul>
-          <li>Haircuts</li>
+          <li>Regular Haircuts</li>
           <li>Classic Shaves</li>
           <li>Awesome Beard Trims</li>
           <li>Fades</li>
-          <li>Regular</li>
           <li>Flat Tops</li>
-          <li>Military</li>
           <li>Style of Your Choice</li>
         </ul>
       </p>
@@ -127,10 +135,6 @@
     <section>
       <h1>Appointments</h1>
       <a target="_top" class="appointment" href="https://squareup.com/appointments/book/85W1GWWXGKQ34/lehi-ole-town-barber-lehi-ut" rel="nofollow">Book an Appointment</a>
-      <p>
-        Tuesday thru Saturday<br>
-        <a class="link" href="tel:(801) 766-9890">(801) 766-9890</a>
-      </p>
     </section>
     <section>
       <h1>Location</h1>
